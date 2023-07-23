@@ -3,6 +3,7 @@ import Head from "next/head"
 
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import Wrapper from "@/components/Wrapper"
 
 export default function App({ Component, pageProps }) {
   return (
@@ -23,9 +24,13 @@ export default function App({ Component, pageProps }) {
           rel='stylesheet'
         />
       </Head>
+      
+      <Wrapper>
       <Header />
       <Component {...pageProps} />
       <Footer />
+      </Wrapper>
+      
     </>
   )
 }
